@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<section class="main">
+        <div>
+            <center><h1 style="color: white ;font-size: 60px;">Make your studies much easier</h1></center>
+            <img style="max-width: 100%; height: auto;" src="{% static 'images/science.png' %}" alt="">
+        </div>
+</section>
+
+<section class="cards" id="services">
+        <h2 class="title">Subjects</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="info">
+                    <h3>Mathematics</h3>
+                    <p><b>Albert Einstein</b></p>
+                    <p> “Without mathematics, there’s nothing you can do. Everything around you is mathematics. Everything around you is numbers”</p>
+                    <br>
+                    <a href="" class="main-btn">Click to translate</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-atom"></i>
+                </div>
+                <div class="info">
+                    <h3>Physics & Chemistry</h3>
+                    <p><b>Richard Feynman</b></p>
+                    <p> “It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong”</p>
+                    <br>
+                    <a href="{% url 'pc' %}" class="main-btn">Click to translate</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-dna"></i>
+                </div>
+                <div class="info">
+                    <h3>SVT</h3>
+                    <p><b>Charles Darwin</b></p>
+                    <p> “Intelligence is based on how efficient a species became at doing the things they need to survive”</p>
+                    <br>
+                    <a href="#projects" class="main-btn">Click to translate</a>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+{% endblock %}
