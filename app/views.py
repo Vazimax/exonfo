@@ -27,3 +27,12 @@ def pc_electricity(request):
     }
 
     return render(request,'electricity.html',context)
+
+def pc_optics(request):
+
+    optics_words = PCWord.objects.all().filter(field='Optics')
+    context = {
+        'optics_words':optics_words
+    }
+
+    return render(request,'optics.html',context)
