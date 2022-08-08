@@ -17,6 +17,7 @@ class MathWord(models.Model):
 class PCWord(models.Model):
     fields = [
         ('General','General'),
+        ('Electricity','Electricity'),
         ('Optics','Optics'),
         ('Waves','Waves'),
         ('Nuclear transformation','Nuclear transformation'),
