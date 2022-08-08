@@ -1,6 +1,8 @@
 from dataclasses import field
 from django.shortcuts import render
 from .models import MathWord, PCWord, SVTWord
+from .filters import OrderFilter
+
 
 def home(request):
 
@@ -12,9 +14,12 @@ def pc(request):
 
 def pc_general(request):
 
-    general_words = PCWord.objects.all().filter(field='Generals')
+    general_words = PCWord.objects.all().filter(field='General')
+    filter = OrderFilter(request.GET,queryset=general_words)
+    general_words = filter.qs
     context = {
-        'general_words':general_words
+        'general_words':general_words,
+        'filter':filter,
     }
 
     return render(request,'pc/pc_general.html',context)
