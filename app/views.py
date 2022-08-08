@@ -18,3 +18,12 @@ def pc_mechanics(request):
     }
 
     return render(request,'mechanics.html',context)
+
+def pc_electricity(request):
+
+    electricity_words = PCWord.objects.all().filter(field='Electricity')
+    context = {
+        'electricity_words':electricity_words
+    }
+
+    return render(request,'electricity.html',context)
