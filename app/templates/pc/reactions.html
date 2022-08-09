@@ -11,7 +11,7 @@
     {% include 'search.html' %}
 
         
-<table style="overflow-x:auto;" class="styled-table">
+<table class="styled-table">
     <thead>
         <tr>
             <th>English</th>
@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for word in electricity_words %}
+        {% for word in reactions_words %}
         <tr>
             <td>{{word.english}}</td>
             <td>{{word.french}}</td>

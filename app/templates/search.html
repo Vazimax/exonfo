@@ -1,7 +1,11 @@
-<div class="search-container">
-    <form method="get">
-        {{filter.form}}
-        <button style="background-color: black; color:white;" type="submit">Search</button>
-    </form>
-</div>
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<form method="get">
+        {{filter.form|crispy}}
+        <br>
+        <button type="submit" class="btn btn-outline-primary">search</button>
+    </div>
+</form>
 

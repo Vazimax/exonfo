@@ -11,5 +11,9 @@ urlpatterns = [
     path('pc/electricity/',pc_electricity,name="electricity"),
     path('pc/general/',pc_general,name="pcgeneral"),
     path('pc/matter/',pc_matter,name="matter"),
+    path('pc/organic/',pc_organic,name="organic-chemistry"),
+    path('pc/chemical-reactions/',pc_reactions,name="chemical-reactions"),
+    path('pc/measurement/',pc_measurement,name="measurement-chemistry"),
+
 
 ]

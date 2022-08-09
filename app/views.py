@@ -95,3 +95,40 @@ def pc_matter(request):
     }
 
     return render(request,'pc/matter.html',context)
+
+def pc_measurement(request):
+
+    measurement_words = PCWord.objects.all().filter(field='Measurements in chemistry')
+    filter = OrderFilter(request.GET,queryset=measurement_words)
+    measurement_words = filter.qs
+    context = {
+        'measurement_words':measurement_words,
+        'filter':filter,
+    }
+
+    return render(request,'pc/measurement.html',context)
+
+def pc_reactions(request):
+
+    reactions_words = PCWord.objects.all().filter(field='Chemical reactions')
+    filter = OrderFilter(request.GET,queryset=reactions_words)
+    reactions_words = filter.qs
+    context = {
+        'reactions_words':reactions_words,
+        'filter':filter,
+    }
+
+    return render(request,'pc/reactions.html',context)
+
+def pc_organic(request):
+
+    organic_words = PCWord.objects.all().filter(field='Organic chemistry')
+    filter = OrderFilter(request.GET,queryset=organic_words)
+    organic_words = filter.qs
+    context = {
+        'organic_words':organic_words,
+        'filter':filter,
+    }
+
+    return render(request,'pc/organic.html',context)
+    
