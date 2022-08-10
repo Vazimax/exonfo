@@ -8,6 +8,8 @@ def home(request):
 
     return render(request,'home.html')
 
+# Physics & Chemistry :
+
 def pc(request):
     
     return render(request,'pc/pc.html')
@@ -132,3 +134,8 @@ def pc_organic(request):
 
     return render(request,'pc/organic.html',context)
     
+# SVT :
+
+def svt(request):
+    
+    return render(request,'svt/svt.html')
