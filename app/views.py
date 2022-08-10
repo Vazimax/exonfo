@@ -151,3 +151,40 @@ def svt_general(request):
     }
 
     return render(request,'svt/svt_general.html',context)
+
+
+def svt_ecology(request):
+
+    ecology_words = SVTWord.objects.all().filter(field='Ecology')
+    filter = OrderFilter(request.GET,queryset=ecology_words)
+    ecology_words = filter.qs
+    context = {
+        'svt_ecology_words':ecology_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_ecology.html',context)
+
+def svt_rep_plant(request):
+
+    rep_plant_words = SVTWord.objects.all().filter(field='Reproduction in plants')
+    filter = OrderFilter(request.GET,queryset=rep_plant_words)
+    rep_plant_words = filter.qs
+    context = {
+        'svt_rep_plant_words':rep_plant_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_rep_plant.html',context)
+
+def svt_geology(request):
+
+    geology_words = SVTWord.objects.all().filter(field='Geology')
+    filter = OrderFilter(request.GET,queryset=geology_words)
+    geology_words = filter.qs
+    context = {
+        'svt_geology_words':geology_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_geology.html',context)

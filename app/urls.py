@@ -18,6 +18,8 @@ urlpatterns = [
     # SVT:
     path('svt/',svt,name="svt"),
     path('svt/general/',svt_general,name="svtgeneral"),
-    
+    path('svt/ecology/',svt_ecology,name="ecology"),
+    path('svt/rep_plant/',svt_rep_plant,name="rep_plant"),
+    path('svt/geology/',svt_geology,name="geology"),
 
 ]
