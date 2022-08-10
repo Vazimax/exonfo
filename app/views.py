@@ -139,3 +139,15 @@ def pc_organic(request):
 def svt(request):
     
     return render(request,'svt/svt.html')
+
+def svt_general(request):
+
+    general_words = SVTWord.objects.all().filter(field='General')
+    filter = OrderFilter(request.GET,queryset=general_words)
+    general_words = filter.qs
+    context = {
+        'svt_general_words':general_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_general.html',context)

@@ -38,14 +38,22 @@ class PCWord(models.Model):
 
 class SVTWord(models.Model):
     fields = [
-        ('biology','biology'),
-        ('geology','geology'),
-
+        ('General','General'),
+        ('Ecology','Ecology'),
+        ('Reproduction in plants','Reproduction in plants'),
+        ('Geology','Geology'),
+        ('Genetics','Genetics'),
+        ('Organic matter','Organic matter'),
+        ('Nerves: Neurons and hormones','Nerves: Neurons and hormones'),
+        ('Reproduction in humans ','Reproduction in humans '),
+        ('Immunology','Immunology'),
     ]
+    
     english = models.CharField(max_length=100)
     french = models.CharField(max_length=100)
     arabic = models.CharField(max_length=100)
     field = models.CharField(max_length=100,null=True,blank=True,choices=fields)
+
 
     def __str__(self):
         return self.english

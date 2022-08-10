@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<section class="main" style="background-color: white;">
+        <div>
+            <img style="max-width: 100%; height: auto;" src="{% static 'images/science.png' %}" alt="">
+        </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 style="color: white;" class="title">Courses</h2>
+    <div class="content">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://essaywriter4me.com/wp-content/uploads/2021/08/physics.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>General</span>
+                    <a href="{% url 'svtgeneral' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://smartart.bjaland.co/wp-content/uploads/2021/04/motion_physics.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Mechanics</span>
+                    <a href="{% url 'mechanics' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.pinimg.com/originals/16/26/bf/1626bfa6f6fa7f2386e2a33fdd4d8b97.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Waves</span>
+                    <a href="{% url 'waves' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://ichef.bbci.co.uk/images/ic/1280xn/p0cgx9mw.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Electricity</span>
+                    <a href="{% url 'electricity' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://i.ytimg.com/vi/9hmeUypGe8M/maxresdefault.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Optics</span>
+                    <a href="{% url 'optics' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://media.proprofs.com/images/QM/user_images/2503852/New%20Project%20(97)(131).jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Nuclear transformations</span>
+                    <a href="{% url 'nuclear' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://assets.website-files.com/5c2fa1f2a2f1205270d8379d/5c3c0b386bc4718c7d04b37d_atom-mark%401200x630.png" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Matter</span>
+                    <a href="{% url 'matter' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://www.organicchemistrytutor.com/wp-content/uploads/2019/02/Organic-Chemistry-Course-Pic-New.png" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Organic chemistry</span>
+                    <a href="{% url 'organic-chemistry' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://embed-ssl.wistia.com/deliveries/128055de9c898747bffa1fc2e757c67b.webp?image_crop_resized=1280x720" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Chemical reactions</span>
+                    <a href="{% url 'chemical-reactions' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://www.osawglobal.com/wp-content/uploads/2017/07/science-lab-india-830x464.jpg" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Explore its terminologies</p>
+                <strong class="project-title">
+                    <span>Measurements in chemistry</span>
+                    <a href="{% url 'measurement-chemistry' %}" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
