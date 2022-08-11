@@ -188,3 +188,15 @@ def svt_geology(request):
     }
 
     return render(request,'svt/svt_geology.html',context)
+
+def svt_genetics(request):
+
+    genetic_words = SVTWord.objects.all().filter(field='Genetics')
+    filter = OrderFilter(request.GET,queryset=genetic_words)
+    genetic_words = filter.qs
+    context = {
+        'svt_genetic_words':genetic_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_genetics.html',context)

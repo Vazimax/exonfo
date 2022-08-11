@@ -21,5 +21,6 @@ urlpatterns = [
     path('svt/ecology/',svt_ecology,name="ecology"),
     path('svt/rep_plant/',svt_rep_plant,name="rep_plant"),
     path('svt/geology/',svt_geology,name="geology"),
+    path('svt/genetics/',svt_genetics,name="genetics"),
 
 ]
