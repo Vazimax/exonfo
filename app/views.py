@@ -72,7 +72,7 @@ def pc_waves(request):
         'filter':filter,
     }
 
-    return render(request,'pc/general.html',context)
+    return render(request,'pc/waves.html',context)
 
 def pc_nuclear(request):
 
