@@ -200,3 +200,52 @@ def svt_genetics(request):
     }
 
     return render(request,'svt/svt_genetics.html',context)
+
+def svt_organic(request):
+
+    organic_words = SVTWord.objects.all().filter(field='Organic matter')
+    filter = OrderFilter(request.GET,queryset=organic_words)
+    organic_words = filter.qs
+    context = {
+        'svt_organic_words':organic_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_organic.html',context)
+
+def svt_nerves(request):
+
+    nerves_words = SVTWord.objects.all().filter(field='Nerves: Neurons and hormones')
+    filter = OrderFilter(request.GET,queryset=nerves_words)
+    nerves_words = filter.qs
+    context = {
+        'svt_nerves_words':nerves_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_nerves.html',context)
+
+def svt_rep_human(request):
+
+    rep_human_words = SVTWord.objects.all().filter(field='Reproduction in humans')
+    filter = OrderFilter(request.GET,queryset=rep_human_words)
+    rep_human_words = filter.qs
+    context = {
+        'svt_rep_human_words':rep_human_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_rep_human.html',context)
+
+def svt_immunity(request):
+
+    immunity_words = SVTWord.objects.all().filter(field='Immunology')
+    filter = OrderFilter(request.GET,queryset=immunity_words)
+    immunity_words = filter.qs
+    context = {
+        'svt_immunity_words':immunity_words,
+        'filter':filter,
+    }
+
+    return render(request,'svt/svt_immunity.html',context)
+
