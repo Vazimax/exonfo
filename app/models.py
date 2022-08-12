@@ -2,10 +2,11 @@ from django.db import models
 
 class MathWord(models.Model):
     fields = [
-        ('geometry','geometry'),
-        ('algebra','algebra'),
-
+        ('General','General'),
+        ('Geometry','Geometry'),
+        ('Algebra and Calculus','Algebra and Calculus'),
     ]
+
     english = models.CharField(max_length=100)
     french = models.CharField(max_length=100)
     arabic = models.CharField(max_length=100)
