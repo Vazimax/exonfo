@@ -227,7 +227,7 @@ def svt_nerves(request):
 
 def svt_rep_human(request):
 
-    rep_human_words = SVTWord.objects.all().filter(field='Reproduction in humans')
+    rep_human_words = SVTWord.objects.all().filter(field='Reproduction in humans ')
     filter = OrderFilter(request.GET,queryset=rep_human_words)
     rep_human_words = filter.qs
     context = {
@@ -249,3 +249,20 @@ def svt_immunity(request):
 
     return render(request,'svt/svt_immunity.html',context)
 
+# MATH :
+
+def math(request):
+    
+    return render(request,'math/math.html')
+
+def math_general(request):
+
+    general_words = MathWord.objects.all().filter(field='General')
+    filter = OrderFilter(request.GET,queryset=general_words)
+    general_words = filter.qs
+    context = {
+        'math_general_words':general_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/math_general.html',context)
