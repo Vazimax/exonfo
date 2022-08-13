@@ -266,3 +266,27 @@ def math_general(request):
     }
 
     return render(request,'math/math_general.html',context)
+
+def math_alca(request):
+
+    alca_words = MathWord.objects.all().filter(field='Algebra and Calculus')
+    filter = OrderFilter(request.GET,queryset=alca_words)
+    alca_words = filter.qs
+    context = {
+        'math_alca_words':alca_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/alca.html',context)
+
+def math_geometry(request):
+
+    geometry_words = MathWord.objects.all().filter(field='Geometry')
+    filter = OrderFilter(request.GET,queryset=geometry_words)
+    geometry_words = filter.qs
+    context = {
+        'geometry_words':geometry_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/geometry.html',context)

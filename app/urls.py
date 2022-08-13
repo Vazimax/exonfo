@@ -26,4 +26,9 @@ urlpatterns = [
     path('svt/nerves/',svt_nerves,name="nerves"),
     path('svt/immunology/',svt_immunity,name="immunity"),
     path('svt/rep_human/',svt_rep_human,name="rep_human"),
+    # MATH:
+    path('math/',math,name="math"),
+    path('math/general/',math_general,name="mathgeneral"),
+    path('math/geometry/',math_geometry,name="geometry"),
+    path('math/alca/',math_alca,name="mathalca"),
 ]
