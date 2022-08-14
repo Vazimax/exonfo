@@ -30,5 +30,5 @@ urlpatterns = [
     path('math/',math,name="math"),
     path('math/general/',math_general,name="mathgeneral"),
     path('math/geometry/',math_geometry,name="geometry"),
-    path('math/alca/',math_alca,name="mathalca"),
+    path('math/setca/',math_setca,name="mathsetca"),
 ]

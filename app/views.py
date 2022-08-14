@@ -267,17 +267,17 @@ def math_general(request):
 
     return render(request,'math/math_general.html',context)
 
-def math_alca(request):
+def math_setca(request):
 
-    alca_words = MathWord.objects.all().filter(field='Algebra and Calculus')
-    filter = OrderFilter(request.GET,queryset=alca_words)
-    alca_words = filter.qs
+    setca_words = MathWord.objects.all().filter(field='Algebra and Calculus')
+    filter = OrderFilter(request.GET,queryset=setca_words)
+    setca_words = filter.qs
     context = {
-        'math_alca_words':alca_words,
+        'math_setca_words':setca_words,
         'filter':filter,
     }
 
-    return render(request,'math/alca.html',context)
+    return render(request,'math/setca.html',context)
 
 def math_geometry(request):
 
