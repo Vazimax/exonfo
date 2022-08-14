@@ -3,8 +3,13 @@ from django.db import models
 class MathWord(models.Model):
     fields = [
         ('General','General'),
-        ('Geometry','Geometry'),
-        ('Algebra and Calculus','Algebra and Calculus'),
+        ('Sets and calculus','Sets and calculus'),
+        ('Plane Geometry','Plane Geometry'),
+        ('Spatial Geometry','Spatial Geometry'),
+        ('Trigonometry','Trigonometry'),
+        ('Statistics','Statistics'),
+        ('Algebra','Algebra'),
+        ('Probability','Probability'),
     ]
 
     english = models.CharField(max_length=100)
