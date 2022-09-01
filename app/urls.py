@@ -3,6 +3,8 @@ from .views import *
 
 urlpatterns = [
     path('',home,name="home"),
+    path('about/',about,name="about"),
+
     # PC:
     path('pc/',pc,name="pc"),
     path('pc/mechanics/',pc_mechanics,name="mechanics"),
@@ -29,6 +31,11 @@ urlpatterns = [
     # MATH:
     path('math/',math,name="math"),
     path('math/general/',math_general,name="mathgeneral"),
-    path('math/geometry/',math_geometry,name="geometry"),
+    path('math/plane_geometry/',math_plane_geometry,name="plane_geometry"),
     path('math/setca/',math_setca,name="mathsetca"),
+    path('math/algebra/',math_algebra,name="math_algebra"),
+    path('math/spatial_geometry/',math_spatial_geometry,name="math_spatial_geometry"),
+    path('math/probability/',math_probability,name="math_probability"),
+    path('math/trigonometry/',math_trigonometry,name="math_trigonometry"),
+    path('math/statistic/',math_statistic,name="math_statistic"),
 ]

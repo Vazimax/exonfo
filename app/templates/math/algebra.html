@@ -10,10 +10,10 @@
 <br>
 
 <center>
-        
+    <h4>Search by using any language you want ! ابحث بالغة التي تريد</h4>  
+    <br>        
     {% include 'search.html' %}
 
-        
 <table style="overflow-x:auto;" class="styled-table">
     <thead>
         <tr>
@@ -23,11 +23,11 @@
         </tr>
     </thead>
     <tbody>
-        {% for word in svt_ecology_words %}
+        {% for word in math_algebra_words %}
         <tr>
             <td>{{word.english}}</td>
             <td>{{word.french}}</td>
-            <td>{{word.arabic}}</td>
+            <td>{{word.arabic}}</td> 
 
         </tr>
         {% endfor %}

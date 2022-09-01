@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      </div>
+      <br>
+      <hr>
+      <br>
+    <h2 style="text-align:center">The team</h2>
+    
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+                <div class="container">
+                <h2>Aboubakr El Habti</h2>
+                <h4 class="positions">Co-Founder & Developer</h4>
+                <p>aboubakr.elhabti@gmail.com</p>
+                <br>
+                <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+            </div>
+        
+            <br>
+    
+        <div class="column">
+        <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+            <h2>Nada Saidi</h2>
+            <h4 class="positions">Co-Founder & Designer</h4>
+            <p>saidinada@example.com</p>
+            <br>
+            <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <br>
+    </center>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .positions {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #3a6cf4;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+</style>
+{% endblock %}

@@ -6,9 +6,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-
 <center>
         
     {% include 'search.html' %}
@@ -23,11 +20,11 @@
         </tr>
     </thead>
     <tbody>
-        {% for word in svt_ecology_words %}
+        {% for word in plane_geometry_words %}
         <tr>
             <td>{{word.english}}</td>
             <td>{{word.french}}</td>
-            <td>{{word.arabic}}</td>
+            <td>{{word.arabic}}</td> 
 
         </tr>
         {% endfor %}

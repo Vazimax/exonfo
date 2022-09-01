@@ -8,6 +8,10 @@ def home(request):
 
     return render(request,'home.html')
 
+def about(request):
+
+    return render(request,'about.html')
+
 # Physics & Chemistry :
 
 def pc(request):
@@ -269,7 +273,7 @@ def math_general(request):
 
 def math_setca(request):
 
-    setca_words = MathWord.objects.all().filter(field='Algebra and Calculus')
+    setca_words = MathWord.objects.all().filter(field='Sets and calculus')
     filter = OrderFilter(request.GET,queryset=setca_words)
     setca_words = filter.qs
     context = {
@@ -279,14 +283,74 @@ def math_setca(request):
 
     return render(request,'math/setca.html',context)
 
-def math_geometry(request):
+def math_plane_geometry(request):
 
-    geometry_words = MathWord.objects.all().filter(field='Geometry')
-    filter = OrderFilter(request.GET,queryset=geometry_words)
-    geometry_words = filter.qs
+    plane_geometry_words = MathWord.objects.all().filter(field='Plane Geometry')
+    filter = OrderFilter(request.GET,queryset=plane_geometry_words)
+    plane_geometry_words = filter.qs
     context = {
-        'geometry_words':geometry_words,
+        'plane_geometry_words':plane_geometry_words,
         'filter':filter,
     }
 
-    return render(request,'math/geometry.html',context)
+    return render(request,'math/plane_geometry.html',context)
+
+def math_algebra(request):
+
+    algebra_words = MathWord.objects.all().filter(field='Algebra')
+    filter = OrderFilter(request.GET,queryset=algebra_words)
+    algebra_words = filter.qs
+    context = {
+        'math_algebra_words':algebra_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/algebra.html',context)
+
+def math_probability(request):
+
+    probability_words = MathWord.objects.all().filter(field='Probability')
+    filter = OrderFilter(request.GET,queryset=probability_words)
+    probability_words = filter.qs
+    context = {
+        'math_probability_words':probability_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/probability.html',context)
+
+def math_spatial_geometry(request):
+
+    spatial_geometry_words = MathWord.objects.all().filter(field='Spatial Geometry')
+    filter = OrderFilter(request.GET,queryset=spatial_geometry_words)
+    spatial_geometry_words = filter.qs
+    context = {
+        'spatial_geometry_words':spatial_geometry_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/spatial_geometry.html',context)
+
+def math_trigonometry(request):
+
+    trigonometry_words = MathWord.objects.all().filter(field='Trigonometry')
+    filter = OrderFilter(request.GET,queryset=trigonometry_words)
+    trigonometry_words = filter.qs
+    context = {
+        'math_trigonometry_words':trigonometry_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/trigonometry.html',context)
+
+def math_statistic(request):
+
+    statistic_words = MathWord.objects.all().filter(field='Statistics')
+    filter = OrderFilter(request.GET,queryset=statistic_words)
+    statistic_words = filter.qs
+    context = {
+        'math_statistic_words':statistic_words,
+        'filter':filter,
+    }
+
+    return render(request,'math/statistic.html',context)
