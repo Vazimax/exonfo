@@ -2,11 +2,21 @@ from dataclasses import field
 from django.shortcuts import render
 from .models import MathWord, PCWord, SVTWord
 from .filters import OrderFilter
+from django.http import JsonResponse
+import json
 
 
 def home(request):
 
     return render(request,'home.html')
+
+def json(request):
+    
+    
+    data = list(SVTWord.objects.values())
+
+    return JsonResponse(data, safe=False)
+
 
 def about(request):
 
