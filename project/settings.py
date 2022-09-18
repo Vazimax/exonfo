@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-(vmz$)@2iqywg39q=3&l*g$&p^wj=7y6uy%ta)*r=om(031091
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['exonfo.herokuapp.com']
+ALLOWED_HOSTS = ['exonfo.herokuapp.com','www.exonfo.com','exonfo.com']
 
 
 # Application definition
