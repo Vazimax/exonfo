@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'images/O.ico' %}">
-    <title>Exonfo</title>
+    {% if title %}
+        <title>Exonfo - {{title}} </title>
+    {% else %}
+        <title>Exonfo</title>
+    {% endif %}
+    <title>Exonfo </title>
 </head>
 <body>
 
