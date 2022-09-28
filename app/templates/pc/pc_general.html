@@ -10,11 +10,12 @@
 <br>
 
 <center>
-    <h4>- Search for <b>Physics & Chemistry</b> terminologies by using any language you want ! -</h4>  
-    <h4> ابحث بأي لغة عن مفردات الكيمياء العضوية</b></h4>  
+    <h4>- Search for <b>Organic chemistry</b> terminologies by using any language you want ! -</h4>  
+    <h4> ابحث بأي لغة عن مفردات <b> الكيمياء العضوية </b></h4>  
 
-    <br>              
+    <br>               
     {% include 'search.html' %}
+        
 <table class="styled-table">
     <thead>
         <tr>
@@ -24,7 +25,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for word in general_words %}
+        {% for word in organic_words %}
         <tr>
             <td>{{word.english}}</td>
             <td>{{word.french}}</td>
