@@ -36,6 +36,7 @@ def pc_general(request):
     context = {
         'general_words':general_words,
         'filter':filter,
+        'title':'PC general words',
     }
 
     return render(request,'pc/pc_general.html',context,{'title':'PC general words'})
