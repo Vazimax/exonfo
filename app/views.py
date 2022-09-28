@@ -28,18 +28,18 @@ def pc(request):
     
     return render(request,'pc/pc.html',{'title':'Physics and Chemistry'})
 
-def pc_general(request):
+def pc_mechanics(request):
 
-    general_words = PCWord.objects.all().filter(field='General')
-    filter = OrderFilter(request.GET,queryset=general_words)
-    general_words = filter.qs
+    mechanic_words = PCWord.objects.all().filter(field='General')
+    filter = OrderFilter(request.GET,queryset=mechanic_words)
+    mechanic_words = filter.qs
     context = {
-        'general_words':general_words,
+        'mechanic_words':mechanic_words,
         'filter':filter,
-        'title':'PC general words',
+        'title':'PC mechanics words',
     }
 
-    return render(request,'pc/pc_general.html',context,{'title':'PC general words'})
+    return render(request,'pc/pc_words.html',context)
 
 def pc_mechanics(request):
 
