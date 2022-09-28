@@ -28,7 +28,7 @@ def pc(request):
     
     return render(request,'pc/pc.html',{'title':'Physics and Chemistry'})
 
-def pc_generals(request):
+def pc_general(request):
 
     general_words = PCWord.objects.all().filter(field='General')
     filter = OrderFilter(request.GET,queryset=general_words)
